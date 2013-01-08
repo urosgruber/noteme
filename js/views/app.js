@@ -24,12 +24,8 @@ define([
 
 			this.listenTo(Notes, 'add',   this.addNote);
 			this.listenTo(Notes, 'reset', this.addAll);
-			this.listenTo(Notes, 'all', this.render);
 
 			Notes.fetch();
-		},
-
-		render: function() {
 		},
 
 		addNote: function( note ) {
