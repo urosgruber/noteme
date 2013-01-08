@@ -45,7 +45,7 @@ define([
 			if ( e.which == 13 ) {
 				if (this.$('#note-id').val()) {
 					var model = Notes.get(this.$id.val());
-					model.set({'content' : this.$input.val().trim()})
+					model.set({'content' : this.$input.val().trim()});
 					model.save({
 						error: this.handleError
 					});
