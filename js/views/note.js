@@ -41,7 +41,7 @@ define([
 
 		edit: function() {
 			$('#note-id').val(this.model.get('id'));
-			$('#new-note').val(this.model.get('content'));
+			$('#new-note').val(this.model.get('content')).focus();
 		},
 
 		destroy: function() {
