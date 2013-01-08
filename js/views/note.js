@@ -31,7 +31,7 @@ define([
 		},
 
 		isCompleted: function() {
-			return !!this.model.get('completed');
+			return this.model.isCompleted();
 		},
 
 

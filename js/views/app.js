@@ -13,7 +13,8 @@ define([
 		el: '#noteme-app',
 
 		events: {
-			'keypress #new-note': 'createNote'
+			'keypress #new-note': 'createNote',
+			'click #remove-completed': 'removeCompleted'
 		},
 
 		initialize: function() {
@@ -39,6 +40,11 @@ define([
 		addAll: function() {
 			this.$notes.html('');
 			Notes.each(this.addNote, this);
+		},
+
+		removeCompleted: function() {
+			_.invoke(Notes.completed(), 'destroy');
+			return false;
 		},
 
 		createNote: function( e ) {

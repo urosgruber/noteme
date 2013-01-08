@@ -23,6 +23,11 @@ define([
 			this.save({
 				completed: 1 - this.get('completed')
 			});
+		},
+
+		isCompleted: function()
+		{
+			return !!this.get('completed');
 		}
 	});
 

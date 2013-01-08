@@ -66,6 +66,13 @@
 			color: #ccc;
 		}
 
+		#remove-completed {
+			cursor: pointer;
+			color: red;
+			font-weight: bold;
+			font-size: 1.0em;
+		}
+
 		.completed {
 			text-decoration: line-through;
 		}
@@ -91,7 +98,7 @@
 				<textarea id="new-note" placeholder="Insert some notes..." rows="10" autofocus></textarea>
 			</header>
 			<ul id="note-list"></ul>
-			<footer></footer>
+			<footer><button id="remove-completed">Remove completed</button></footer>
 		</section>
 		<footer>&copy; 2013, Uroš Gruber</footer>
 	</div>
