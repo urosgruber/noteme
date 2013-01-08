@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Noteme test App</title>
+	<link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
+	<style>
+		button {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: none;
+			vertical-align: baseline;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			-ms-appearance: none;
+			-o-appearance: none;
+			appearance: none;
+		}
+
+		textarea {
+			width: 100%;
+		}
+		footer {
+			margin-top: 20px;
+			font-size: 0.8em;
+			text-align: center;
+		}
+		.content {
+			margin: 0 auto;
+			padding: 0 10px;
+			max-width: 400px;
+		}
+
+		.content h1 {
+			font-family: 'Viga', sans-serif;
+			text-align: center;
+		}
+		#note-list {
+			padding: 0;
+			position: relative;
+			margin: 0;
+			font-size: 1.1em;
+		}
+		#note-list li {
+			list-style: none;
+			
+		}
+		.note-view {
+			position: relative;
+			border-bottom: 1px dotted #ddd;
+			/*width: 250px;*/
+		}
+		#note-list li .remove {
+			cursor: pointer;
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 5px;
+			bottom: 0;
+			width: 20px;
+			height: 20px;
+			margin: auto 0;
+			font-size: 1em;
+			color: #ccc;
+		}
+
+		.completed {
+			text-decoration: line-through;
+		}
+
+		#note-list li .remove:after {
+			content: '✖';
+		}
+
+		#note-list li:hover .remove {
+			display: block;
+		}
+
+
+	</style>
+	<script data-main="js/main" src="assets/require.min.js"></script>
+</head>
+<body>
+	<div class="content">
+		<header><h1>Noteme App</h1></header>
+		<section id="noteme-app">
+			<header id="form">
+				<input type="hidden" id="note-id">
+				<textarea id="new-note" placeholder="Insert some notes..." rows="10" autofocus></textarea>
+			</header>
+			<ul id="note-list"></ul>
+			<footer></footer>
+		</section>
+		<footer>&copy; 2013, Uroš Gruber</footer>
+	</div>
+</body>
+</html>
