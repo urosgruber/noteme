@@ -12,7 +12,7 @@ define([
 		},
 
 		sync: function (method, model, options) {
-			if (method == 'create' || method == 'update') {
+			if (method === 'create' || method === 'update') {
 				var data = _.extend({note : model.toJSON()});
 				options.data = JSON.stringify(data);
 			}
