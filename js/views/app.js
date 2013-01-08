@@ -48,7 +48,7 @@ define([
 		},
 
 		createNote: function( e ) {
-			if ( e.which == 13 ) {
+			if ( e.which == 13 && !e.shiftKey) {
 				if (this.$('#note-id').val()) {
 					var model = Notes.get(this.$id.val());
 					model.set({'content' : this.$input.val().trim()});
