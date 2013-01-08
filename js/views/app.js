@@ -26,7 +26,6 @@ define([
 			this.listenTo(Notes, 'all', this.render);
 
 			Notes.fetch();
-			Notes.sort();
 		},
 
 		render: function() {
